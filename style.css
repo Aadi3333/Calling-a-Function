@@ -1,0 +1,45 @@
+*{
+	margin: 40px;
+	padding: 110px;
+	box-sizing: border-box;
+	font-family: arial;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 5%;
+	background: #000;
+    background-image: url('web.jpg');
+    
+}
+h2{
+	position: absolute;
+	font-size: 2em;
+	letter-spacing: 10px;
+	color: #0e3742;
+	text-transform: uppercase;
+	width: 0%;
+	text-align: center;
+	-webkit-box-reflect : below 1px linear-gradient(transparent , #0004);
+	line-height: 0.70em;
+	outline: none;
+	animation: animate 3s linear infinite;
+    margin-top: -20%;
+}
+@keyframes animate{
+	0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+		color: #0e3742;
+		text-shadow: none;
+	}
+	18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+		color: rgb(255, 231, 196);
+        background-attachment: fixed;
+		text-shadow: 0 0 10px #03bcf4,
+		            0 0 20px #03bcf4,
+		            0 0 40px #03bcf4,
+		            0 0 80px #03bcf4,
+		            0 0 160px #03bcf4;
+
+	}
+}
