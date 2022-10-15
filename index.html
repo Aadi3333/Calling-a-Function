@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang=”en”>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Light</title>
+</head>
+
+<style>
+    .button {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .button1 {
+        padding: 10px;
+        background-color: red;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: bolder;
+        font-style: italic;
+        margin: 40px;
+    }
+
+    .button2 {
+        padding: 10px;
+        background-color: yellow;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: bolder;
+        font-style: italic;
+        margin: 35px;
+    }
+
+    .button3 {
+        padding: 10px;
+        background-color: green;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: bolder;
+        font-style: italic;
+        margin: 30px;
+    }
+
+    .button4 {
+        padding: 10px;
+        background-color: brown;
+        font-size: 20px;
+        border-radius: 10px;
+        font-weight: bolder;
+        font-style: italic;
+        margin: 35px;
+    }
+</style>
+
+
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+
+
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDP6S2fwJSKki-IpuyFSJlxjrwjQaDaius",
+            authDomain: "light-97b4c.firebaseapp.com",
+            databaseURL: "https://light-97b4c-default-rtdb.firebaseio.com",
+            projectId: "light-97b4c",
+            storageBucket: "light-97b4c.appspot.com",
+            messagingSenderId: "425329363145",
+            appId: "1:425329363145:web:6064c81a93ee005e746518",
+            measurementId: "G-6RB17QYEGR"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        function ledRED() {
+            firebase.database().ref("Light/").set({status:"RED"})
+        }
+
+        function ledYELLOW() {
+            firebase.database().ref("Light/").set({status:"YELLOW"})
+        }
+
+        function ledGREEN() {
+            firebase.database().ref("Light/").set({status:"GREEN"})
+        }
+
+        function ledOFF() {
+            firebase.database().ref("Light/").set({status:"OFF"})
+        }
+
+
+    </script>
+
+    <h2>LED</h2>
+
+    <button class="button button1" onclick="ledRED()">RED</button1>
+        <button class="button button2" onclick="ledYELLOW()">YELLOW</button2>
+            <button class="button button3" onclick="ledGREEN()">GREEN</button3>
+                <button class="button button4" onclick="ledOFF()">OFF</button4>
+
+</body>
+
+</html>
